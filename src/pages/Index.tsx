@@ -216,7 +216,7 @@ const IndexPage = () => {
       <footer className="py-12 px-4 md:px-8 bg-neutral-900 text-neutral-400">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-white text-lg font-medium mb-4">СТИЛЬ</h3>
+            <h3 className="text-white text-lg font-medium mb-4">G.YERI</h3>
             <p className="text-sm">
               Создавая уникальные образы для тех, кто ценит качество и стиль.
             </p>
@@ -276,13 +276,13 @@ const IndexPage = () => {
             <ul className="space-y-2 text-sm">
               <li>ул. Примерная, 123</li>
               <li>Москва, Россия</li>
-              <li>info@mystyle.ru</li>
+              <li>info@gyeri.ru</li>
               <li>+7 (123) 456-78-90</li>
             </ul>
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-neutral-800 text-sm text-center">
-          © 2025 СТИЛЬ. Все права защищены.
+          © 2025 G.YERI. Все права защищены.
         </div>
       </footer>
     </div>

@@ -1,12 +1,7 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ShoppingBag, Search, User, Menu } from 'lucide-react';
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import React from "react";
+import { Link } from "react-router-dom";
+import { ShoppingBag, Search, User, Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -14,8 +9,11 @@ const Navbar = () => {
     <nav className="w-full py-4 px-4 md:px-8 border-b bg-white">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-xl md:text-2xl font-playfair font-bold tracking-tight">
-          СТИЛЬ
+        <Link
+          to="/"
+          className="text-xl md:text-2xl font-playfair font-bold tracking-tight"
+        >
+          G.YERI
         </Link>
 
         {/* Desktop Navigation */}
@@ -23,10 +21,16 @@ const Navbar = () => {
           <Link to="/" className="text-sm hover:text-primary transition-colors">
             Главная
           </Link>
-          <Link to="/products" className="text-sm hover:text-primary transition-colors">
+          <Link
+            to="/products"
+            className="text-sm hover:text-primary transition-colors"
+          >
             Каталог
           </Link>
-          <Link to="/guide" className="text-sm hover:text-primary transition-colors">
+          <Link
+            to="/guide"
+            className="text-sm hover:text-primary transition-colors"
+          >
             Руководство
           </Link>
         </div>
@@ -55,13 +59,22 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[250px]">
               <div className="flex flex-col space-y-4 pt-8">
-                <Link to="/" className="text-sm hover:text-primary transition-colors">
+                <Link
+                  to="/"
+                  className="text-sm hover:text-primary transition-colors"
+                >
                   Главная
                 </Link>
-                <Link to="/products" className="text-sm hover:text-primary transition-colors">
+                <Link
+                  to="/products"
+                  className="text-sm hover:text-primary transition-colors"
+                >
                   Каталог
                 </Link>
-                <Link to="/guide" className="text-sm hover:text-primary transition-colors">
+                <Link
+                  to="/guide"
+                  className="text-sm hover:text-primary transition-colors"
+                >
                   Руководство
                 </Link>
                 <div className="pt-6">
