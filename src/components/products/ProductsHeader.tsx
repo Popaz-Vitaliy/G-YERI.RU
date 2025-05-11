@@ -1,7 +1,6 @@
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 interface ProductsHeaderProps {
   totalProducts: number;
@@ -9,10 +8,10 @@ interface ProductsHeaderProps {
   resetFilters: () => void;
 }
 
-const ProductsHeader: React.FC<ProductsHeaderProps> = ({ 
-  totalProducts, 
-  hasActiveFilters, 
-  resetFilters 
+const ProductsHeader: React.FC<ProductsHeaderProps> = ({
+  totalProducts,
+  hasActiveFilters,
+  resetFilters,
 }) => {
   return (
     <div className="mb-6 flex justify-between items-center">
@@ -20,7 +19,12 @@ const ProductsHeader: React.FC<ProductsHeaderProps> = ({
         Показано {totalProducts} товаров
       </p>
       {hasActiveFilters && (
-        <Button variant="ghost" size="sm" onClick={resetFilters} className="text-sm flex items-center">
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={resetFilters}
+          className="text-sm flex items-center"
+        >
           <X className="h-3 w-3 mr-1" />
           Очистить фильтры
         </Button>

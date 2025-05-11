@@ -75,6 +75,11 @@ const productsData: ProductCardProps[] = [
   },
 ];
 
+// Получение уникальных категорий из данных
+const categories = Array.from(
+  new Set(productsData.map((product) => product.category)),
+);
+
 const ProductsPage = () => {
   const {
     filteredProducts,
@@ -84,38 +89,67 @@ const ProductsPage = () => {
     setPriceRange,
     applyFilters,
     resetFilters,
-  } = useProductsFilter(productsData);
+    hasActiveFilters,
+  } = useProductsFilter({
+    initialProducts: productsData,
+    categories,
+  });
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <ProductsHeader
-        count={filteredProducts.length}
-        showClear={selectedCategories.length > 0}
-        onClear={resetFilters}
-      />
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row gap-8">
-        <aside className="w-full md:w-64 shrink-0 hidden md:block">
-          <ProductsFilters
-            priceRange={priceRange}
-            selectedCategories={selectedCategories}
-            onPriceChange={setPriceRange}
-            onToggleCategory={toggleCategory}
-            onApply={applyFilters}
-            onReset={resetFilters}
-          />
-        </aside>
-        <div className="md:hidden">
-          <ProductsMobileFilters
-            priceRange={priceRange}
-            selectedCategories={selectedCategories}
-            onPriceChange={setPriceRange}
-            onToggleCategory={toggleCategory}
-            onApply={applyFilters}
-            onReset={resetFilters}
-          />
+
+      {/* Page Header */}
+      <div className="bg-neutral-100 py-10 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-playfair font-bold">
+            Каталог
+          </h1>
+          <p className="text-muted-foreground mt-2">
+            Найдите идеальную одежду для вашего стиля
+          </p>
         </div>
-        <ProductsGrid products={filteredProducts} />
+      </div>
+
+      <div className="max-w-7xl mx-auto w-full px-4 md:px-8 py-8">
+        <ProductsHeader
+          totalProducts={filteredProducts.length}
+          hasActiveFilters={hasActiveFilters}
+          resetFilters={resetFilters}
+        />
+
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Desktop Filters */}
+          <aside className="w-full md:w-64 shrink-0 hidden md:block">
+            <ProductsFilters
+              categories={categories}
+              selectedCategories={selectedCategories}
+              priceRange={priceRange}
+              setPriceRange={setPriceRange}
+              toggleCategory={toggleCategory}
+              applyFilters={applyFilters}
+              resetFilters={resetFilters}
+            />
+          </aside>
+
+          {/* Mobile Filters */}
+          <ProductsMobileFilters
+            categories={categories}
+            selectedCategories={selectedCategories}
+            priceRange={priceRange}
+            setPriceRange={setPriceRange}
+            toggleCategory={toggleCategory}
+            applyFilters={applyFilters}
+            resetFilters={resetFilters}
+          />
+
+          <div className="flex-1">
+            <ProductsGrid
+              products={filteredProducts}
+              resetFilters={resetFilters}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
