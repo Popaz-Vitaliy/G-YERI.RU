@@ -8,6 +8,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
 } from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
@@ -34,28 +37,82 @@ const Navbar = () => {
               Каталог <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="center" className="w-48">
+              {/* Мужская одежда с подкатегориями */}
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>Мужская одежда</DropdownMenuSubTrigger>
+                <DropdownMenuSubContent>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/products?category=mens-tshirts"
+                      className="w-full"
+                    >
+                      Футболки
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/products?category=mens-shirts"
+                      className="w-full"
+                    >
+                      Рубашки
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/products?category=mens-pants" className="w-full">
+                      Брюки
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/products?category=mens-all" className="w-full">
+                      Вся мужская одежда
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuSub>
+
+              {/* Женская одежда с подкатегориями */}
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>Женская одежда</DropdownMenuSubTrigger>
+                <DropdownMenuSubContent>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/products?category=womens-tshirts"
+                      className="w-full"
+                    >
+                      Футболки
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/products?category=womens-dresses"
+                      className="w-full"
+                    >
+                      Платья
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/products?category=womens-skirts"
+                      className="w-full"
+                    >
+                      Юбки
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/products?category=womens-all" className="w-full">
+                      Вся женская одежда
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuSub>
+
               <DropdownMenuItem asChild>
-                <Link to="/products" className="w-full">
-                  Мужская одежда
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/products" className="w-full">
-                  Женская одежда
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/products" className="w-full">
-                  Футболки
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/products" className="w-full">
+                <Link to="/products?category=accessories" className="w-full">
                   Аксессуары
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/products" className="w-full">
+                <Link to="/products?category=new" className="w-full">
                   Новинки
                 </Link>
               </DropdownMenuItem>
@@ -108,27 +165,77 @@ const Navbar = () => {
 
                 <div className="space-y-2">
                   <p className="text-sm font-medium">Каталог</p>
-                  <div className="pl-2 space-y-2">
+                  <div className="pl-2 space-y-3">
+                    {/* Мужская одежда с подкатегориями */}
+                    <div>
+                      <p className="text-sm font-medium">Мужская одежда</p>
+                      <div className="pl-2 space-y-2 mt-1">
+                        <Link
+                          to="/products?category=mens-tshirts"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Футболки
+                        </Link>
+                        <Link
+                          to="/products?category=mens-shirts"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Рубашки
+                        </Link>
+                        <Link
+                          to="/products?category=mens-pants"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Брюки
+                        </Link>
+                        <Link
+                          to="/products?category=mens-all"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Вся мужская одежда
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Женская одежда с подкатегориями */}
+                    <div>
+                      <p className="text-sm font-medium">Женская одежда</p>
+                      <div className="pl-2 space-y-2 mt-1">
+                        <Link
+                          to="/products?category=womens-tshirts"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Футболки
+                        </Link>
+                        <Link
+                          to="/products?category=womens-dresses"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Платья
+                        </Link>
+                        <Link
+                          to="/products?category=womens-skirts"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Юбки
+                        </Link>
+                        <Link
+                          to="/products?category=womens-all"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Вся женская одежда
+                        </Link>
+                      </div>
+                    </div>
+
                     <Link
-                      to="/products"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Мужская одежда
-                    </Link>
-                    <Link
-                      to="/products"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Женская одежда
-                    </Link>
-                    <Link
-                      to="/products"
+                      to="/products?category=accessories"
                       className="block text-sm hover:text-primary transition-colors"
                     >
                       Аксессуары
                     </Link>
                     <Link
-                      to="/products"
+                      to="/products?category=new"
                       className="block text-sm hover:text-primary transition-colors"
                     >
                       Новинки
