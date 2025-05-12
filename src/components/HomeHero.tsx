@@ -1,41 +1,30 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 
 const HomeHero = () => {
   return (
-    <div className="relative w-full h-[80vh] overflow-hidden bg-neutral-100">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://cdn.poehali.dev/files/235720c7-3137-445a-a6fc-a36e186930bb.jpeg')",
-          filter: "brightness(0.75)",
-          backgroundPosition: "center 40%", // Центрировать чуть выше середины
-          backgroundSize: "cover", // Гарантирует заполнение всего контейнера
-        }}
-      ></div>
-
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+    <div className="relative w-full h-[80vh] overflow-hidden bg-gradient-to-r from-[#1A1F2C] to-[#6E59A5]">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-1.2.1&auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20"></div>
 
       <div className="relative h-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col justify-center">
         <div className="max-w-xl">
           <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white mb-4">
-            Коллекция "Дикая природа"
+            Стиль, который вдохновляет
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8">
-            Природная сила и уникальный стиль. Создайте образ, отражающий вашу
-            внутреннюю силу и характер.
+            Откройте для себя нашу коллекцию одежды и аксессуаров, созданных с заботой о качестве и стиле.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-white text-black hover:bg-white/90">
-              Смотреть коллекцию
+              Смотреть коллекции
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white/10"
             >
-              Подробнее
+              О нас
             </Button>
           </div>
         </div>
