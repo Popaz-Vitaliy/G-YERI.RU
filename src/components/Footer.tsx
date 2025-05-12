@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -65,10 +64,10 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="text-white text-lg font-medium mb-4">Контакты</h3>
           <ul className="space-y-2 text-sm">
-            <li>ул. Примерная, 123</li>
+            <li>ул. Осенняя, дом 16</li>
             <li>Москва, Россия</li>
-            <li>info@gyeri.ru</li>
-            <li>+7 (123) 456-78-90</li>
+            <li>evox.org@mail.ru</li>
+            <li>+7(915)169-47-11</li>
           </ul>
         </div>
       </div>
