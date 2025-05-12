@@ -6,6 +6,7 @@ import ProductsMobileFilters from "@/components/products/ProductsMobileFilters";
 import ProductsHeader from "@/components/products/ProductsHeader";
 import ProductsGrid from "@/components/products/ProductsGrid";
 import { useProductsFilter } from "@/hooks/useProductsFilter";
+import Footer from "@/components/Footer";
 
 // Sample products data
 const productsData: ProductCardProps[] = [
@@ -151,6 +152,7 @@ const ProductsPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
