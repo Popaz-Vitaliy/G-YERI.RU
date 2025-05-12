@@ -11,8 +11,8 @@ const WolfHero: React.FC = () => {
             Artificial intelligence in every detail
           </h1>
           <p className="text-lg text-neutral-700">
-            Вдохновленные дикой природой, мы создаем одежду, которая сочетает в
-            себе стиль, комфорт и уникальность.
+            Вдохновленные искусственным интеллектом, мы создаем одежду, которая
+            сочетает в себе стиль, комфорт и уникальность.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button size="lg" className="bg-neutral-800 hover:bg-neutral-700">
