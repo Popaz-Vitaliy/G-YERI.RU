@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -9,10 +8,11 @@ const WolfHero: React.FC = () => {
         {/* Текстовая часть */}
         <div className="md:w-1/2 space-y-6 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-playfair font-bold text-neutral-800">
-            Дух природы в каждой детали
+            Artificial intelligence in every detail
           </h1>
           <p className="text-lg text-neutral-700">
-            Вдохновленные дикой природой, мы создаем одежду, которая сочетает в себе стиль, комфорт и уникальность.
+            Вдохновленные дикой природой, мы создаем одежду, которая сочетает в
+            себе стиль, комфорт и уникальность.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button size="lg" className="bg-neutral-800 hover:bg-neutral-700">
@@ -27,7 +27,7 @@ const WolfHero: React.FC = () => {
             </Button>
           </div>
         </div>
-        
+
         {/* Изображение волка */}
         <div className="md:w-1/2 flex justify-center">
           <div className="relative w-full max-w-md overflow-hidden rounded-lg shadow-xl">
