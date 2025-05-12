@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ShoppingBag, Search, User, Menu } from "lucide-react";
+import { ShoppingBag, Search, User, Menu, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   return (
@@ -21,12 +27,41 @@ const Navbar = () => {
           <Link to="/" className="text-sm hover:text-primary transition-colors">
             Главная
           </Link>
-          <Link
-            to="/products"
-            className="text-sm hover:text-primary transition-colors"
-          >
-            Каталог
-          </Link>
+
+          {/* Каталог с выпадающим меню */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-sm hover:text-primary transition-colors flex items-center gap-1">
+              Каталог <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-48">
+              <DropdownMenuItem asChild>
+                <Link to="/products" className="w-full">
+                  Мужская одежда
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/products" className="w-full">
+                  Женская одежда
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/products" className="w-full">
+                  Аксессуары
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/products" className="w-full">
+                  Новинки
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/products" className="w-full font-medium">
+                  Все товары
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Link
             to="/guide"
             className="text-sm hover:text-primary transition-colors"
@@ -65,12 +100,43 @@ const Navbar = () => {
                 >
                   Главная
                 </Link>
-                <Link
-                  to="/products"
-                  className="text-sm hover:text-primary transition-colors"
-                >
-                  Каталог
-                </Link>
+
+                <div className="space-y-2">
+                  <p className="text-sm font-medium">Каталог</p>
+                  <div className="pl-2 space-y-2">
+                    <Link
+                      to="/products"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Мужская одежда
+                    </Link>
+                    <Link
+                      to="/products"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Женская одежда
+                    </Link>
+                    <Link
+                      to="/products"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Аксессуары
+                    </Link>
+                    <Link
+                      to="/products"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Новинки
+                    </Link>
+                    <Link
+                      to="/products"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Все товары
+                    </Link>
+                  </div>
+                </div>
+
                 <Link
                   to="/guide"
                   className="text-sm hover:text-primary transition-colors"
