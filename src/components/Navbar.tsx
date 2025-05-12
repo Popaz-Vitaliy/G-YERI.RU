@@ -46,6 +46,11 @@ const Navbar = () => {
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link to="/products" className="w-full">
+                  Футболки
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/products" className="w-full">
                   Аксессуары
                 </Link>
               </DropdownMenuItem>
