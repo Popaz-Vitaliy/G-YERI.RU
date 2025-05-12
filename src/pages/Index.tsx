@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
-import HomeHero from "@/components/HomeHero";
 import Footer from "@/components/Footer";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import CategoriesSection from "@/components/home/CategoriesSection";
 import QualityBanner from "@/components/home/QualityBanner";
+import WolfHero from "@/components/WolfHero";
 import { featuredProducts } from "@/data/featuredProducts";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -22,7 +22,7 @@ const IndexPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <HomeHero />
+      <WolfHero />
 
       {/* Кнопка для показа/скрытия популярных товаров */}
       <div className="w-full py-6 bg-neutral-50">
