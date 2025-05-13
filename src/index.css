@@ -100,7 +100,15 @@
   }
 }
 
-/* Добавляем шрифт SpaceX */
+/* Стили для заголовка Artificial Intelligence */
+@font-face {
+  font-family: "Orbitron";
+  src: url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "SpaceX";
   src: url("https://cdn.poehali.dev/files/spacex.woff2") format("woff2");
@@ -110,6 +118,6 @@
 }
 
 .font-spacex {
-  font-family: "SpaceX", sans-serif;
+  font-family: "SpaceX", "Orbitron", sans-serif;
   letter-spacing: 0.05em;
 }
