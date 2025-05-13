@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
@@ -66,6 +65,14 @@ const NavbarMobileMenu: React.FC = () => {
       >
         Руководство
       </Link>
+
+      <Link
+        to="/about"
+        className="text-sm hover:text-primary transition-colors"
+      >
+        О нас
+      </Link>
+
       <div className="pt-6">
         <Button variant="outline" className="w-full">
           <Search className="h-4 w-4 mr-2" />

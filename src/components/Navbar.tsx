@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { ShoppingBag, Search, User, Menu } from "lucide-react";
@@ -31,6 +30,12 @@ const Navbar: React.FC = () => {
             className="text-sm hover:text-primary transition-colors"
           >
             Руководство
+          </Link>
+          <Link
+            to="/about"
+            className="text-sm hover:text-primary transition-colors"
+          >
+            О нас
           </Link>
         </div>
 
