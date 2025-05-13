@@ -1,4 +1,3 @@
-
 import { fontFamily } from "tailwindcss/defaultTheme";
 import tailwindcssAnimate from "tailwindcss-animate";
 import typography from "@tailwindcss/typography";
@@ -17,8 +16,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", ...fontFamily.sans],
         playfair: ["Playfair Display", "serif"],
+        spacex: ["SpaceX", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

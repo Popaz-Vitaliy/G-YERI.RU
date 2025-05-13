@@ -7,8 +7,9 @@ const WolfHero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-8">
         {/* Текстовая часть */}
         <div className="md:w-1/2 space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-playfair font-bold text-neutral-800">
-            Artificial intelligence in every detail
+          <h1 className="font-spacex text-[#0037FF] text-4xl md:text-5xl uppercase tracking-wider">
+            Artificial intelligence
+            <span className="block">in every detail</span>
           </h1>
           <p className="text-lg text-neutral-700">
             Вдохновленные искусственным интеллектом, мы создаем одежду, которая
